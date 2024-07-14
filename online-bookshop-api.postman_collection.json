@@ -1,0 +1,909 @@
+{
+	"info": {
+		"_postman_id": "10a7e5bb-b0c4-42b0-a09f-42e7bce839ef",
+		"name": "online-bookshop-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33668461"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerBook/All",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerBook",
+								"All"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerBook/FindById?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerBook",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByName",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerBook/FindByTitle?title=da",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerBook",
+								"FindByTitle"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "da"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"test1\",\r\n  \"author\": \"test\",\r\n  \"nameCategory\": \"Fiction\",\r\n  \"publicationYear\": 2010,\r\n  \"availableCopies\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerBook/CreateBook",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerBook",
+								"CreateBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"availableCopies\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerBook/UpdateBook?id=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerBook",
+								"UpdateBook"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerBook/DeleteBook?id=10",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerBook",
+								"DeleteBook"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCategory/All",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCategory",
+								"All"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCategory/FindById?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCategory",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByName",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCategory/FindByName?name=Fiction",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCategory",
+								"FindByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Fiction"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCategory/CreateCategory?name=Test",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCategory",
+								"CreateCategory"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCategory/UpdateCategory?id=4&name=test1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCategory",
+								"UpdateCategory"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								},
+								{
+									"key": "name",
+									"value": "test1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCategory/DeleteCategory?id=5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCategory",
+								"DeleteCategory"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Loans",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerLoan/All",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerLoan",
+								"All"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerLoan/FindById?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerLoan",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NjA1MjUsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.UgqWXQojUZ6qHdtDknWrEdLCbeAqVie1HniaTkzVLFc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"gabi@gmail.com\",\r\n  \"password\": \"Gabi1234!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCustomer/LoginCustomer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"LoginCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"string\",\r\n  \"name\": \"string\",\r\n  \"email\": \"string@gmail.com\",\r\n  \"phoneNumber\": \"string\",\r\n  \"password\": \"testT1234!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCustomer/CreateCustomer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"CreateCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCustomer/All",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"All"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCustomer/FindById?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByName",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NTg1NzgsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.QZAGZRPkgCw5FKSdpMKbePiSkgWpvz17H5i_TQG9U7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCustomer/FindByName?name=gabi",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"FindByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "gabi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NjA1MjUsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.UgqWXQojUZ6qHdtDknWrEdLCbeAqVie1HniaTkzVLFc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"test1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCustomer/UpdateCustomer?id=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"UpdateCustomer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NjA1MjUsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.UgqWXQojUZ6qHdtDknWrEdLCbeAqVie1HniaTkzVLFc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCustomer/DeleteCustomer?id=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"DeleteCustomer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddLoan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NjA1MjUsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.UgqWXQojUZ6qHdtDknWrEdLCbeAqVie1HniaTkzVLFc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCustomer/AddLoan?id=1&nameBook=Sapiens%3A%20A%20Brief%20History%20of%20Humankind",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"AddLoan"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "nameBook",
+									"value": "Sapiens%3A%20A%20Brief%20History%20of%20Humankind"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteLoan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA5NjA1MjUsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.UgqWXQojUZ6qHdtDknWrEdLCbeAqVie1HniaTkzVLFc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7295/api/v1/ControllerCustomer/DeleteLoan?id=1&loanId=5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7295",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"DeleteLoan"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "loanId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
